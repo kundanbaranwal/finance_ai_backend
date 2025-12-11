@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: finance-tracker-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        generateValue: false
+      - key: JWT_SECRET
+        generateValue: false
+      - key: CORS_ORIGIN
+        generateValue: false
+      - key: AI_API_KEY
+        generateValue: false
+      - key: AI_API_BASE
+        value: https://api.openai.com/v1

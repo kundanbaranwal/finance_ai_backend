@@ -6,6 +6,7 @@ const { body, validationResult } = require("express-validator");
 const User = require("../models/User");
 
 // Register
+//hi
 router.post(
   "/register",
   [
